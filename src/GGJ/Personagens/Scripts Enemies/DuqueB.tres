@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="BaseEnemy" load_steps=3 format=3 uid="uid://ds1d70thdhm77"]
+
+[ext_resource type="Script" path="res://Personagens/BaseEnemy.gd" id="1_i68oa"]
+[ext_resource type="Texture2D" uid="uid://nyw7f15dr2k" path="res://Personagens/Duque 1B/Duque1B.png" id="2_s43iq"]
+
+[resource]
+script = ExtResource("1_i68oa")
+name = "Duque"
+texture = ExtResource("2_s43iq")
+health = 2
+max_health = 4
+damage = 0

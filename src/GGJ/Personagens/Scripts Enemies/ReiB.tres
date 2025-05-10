@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bgoqj0lk0xf6k"]
+
+[ext_resource type="Script" path="res://Personagens/BaseEnemy.gd" id="1_abeq2"]
+[ext_resource type="Texture2D" uid="uid://dbonej4xurka2" path="res://Personagens/Rei 1B/Rei1B.png" id="2_tyvcp"]
+
+[resource]
+script = ExtResource("1_abeq2")
+name = "Rei"
+texture = ExtResource("2_tyvcp")
+health = 3
+max_health = 6
+damage = 0

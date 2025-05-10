@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="BaseEnemy" load_steps=3 format=3 uid="uid://csb11t11255g1"]
+
+[ext_resource type="Script" path="res://Personagens/BaseEnemy.gd" id="1_nd5xc"]
+[ext_resource type="Texture2D" uid="uid://hhjdiug22els" path="res://Personagens/Principe 1B/Principe1B.png" id="2_p7otl"]
+
+[resource]
+script = ExtResource("1_nd5xc")
+name = "Principe"
+texture = ExtResource("2_p7otl")
+health = 2
+max_health = 4
+damage = 0

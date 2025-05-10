@@ -1,0 +1,110 @@
+[gd_scene load_steps=8 format=3 uid="uid://dyfurrwj3x7uj"]
+
+[ext_resource type="Script" path="res://MenuPrincipal/main_menu.gd" id="1_4x7jm"]
+[ext_resource type="Texture2D" uid="uid://ce4nb3y34vkll" path="res://MenuPrincipal/menu.png" id="2_rufks"]
+[ext_resource type="Texture2D" uid="uid://dtkxbqdmmd10w" path="res://MenuPrincipal/botao_jogar.png" id="3_kovbh"]
+[ext_resource type="Texture2D" uid="uid://bohs07gdnkeo8" path="res://MenuPrincipal/botao_sair.png" id="4_84yyn"]
+
+[sub_resource type="SystemFont" id="SystemFont_ft73w"]
+font_names = PackedStringArray("Comic Sans MS")
+
+[sub_resource type="SystemFont" id="SystemFont_cjn6x"]
+font_names = PackedStringArray("Comic Sans MS")
+
+[sub_resource type="SystemFont" id="SystemFont_jtra0"]
+font_names = PackedStringArray("Comic Sans MS")
+oversampling = 6.0
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4x7jm")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rufks")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 75
+
+[node name="Separador" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = SubResource("SystemFont_ft73w")
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Separador" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Iniciar_Button" type="Button" parent="."]
+layout_mode = 2
+offset_left = 75.0
+offset_top = 487.0
+offset_right = 237.0
+offset_bottom = 593.0
+scale = Vector2(2, 2)
+theme_override_font_sizes/font_size = 32
+icon = ExtResource("3_kovbh")
+flat = true
+icon_alignment = 1
+
+[node name="Sair_Button" type="Button" parent="."]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+offset_left = 1522.0
+offset_top = 487.0
+offset_right = 1684.0
+offset_bottom = 593.0
+scale = Vector2(2, 2)
+theme_override_fonts/font = SubResource("SystemFont_cjn6x")
+theme_override_font_sizes/font_size = 32
+icon = ExtResource("4_84yyn")
+flat = true
+
+[node name="FullscreanButton" type="Node2D" parent="."]
+
+[node name="CheckButton" type="CheckButton" parent="FullscreanButton"]
+offset_right = 139.0
+offset_bottom = 68.0
+scale = Vector2(1.3, 1.3)
+theme_override_fonts/font = SubResource("SystemFont_jtra0")
+text = "Fullscreen"
+
+[connection signal="toggled" from="FullscreanButton/CheckButton" to="." method="_on_check_button_toggled"]

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="BaseEnemy" load_steps=3 format=3 uid="uid://do84y88gd6w21"]
+
+[ext_resource type="Script" path="res://Personagens/BaseEnemy.gd" id="1_wyt6s"]
+[ext_resource type="Texture2D" uid="uid://c7eoj37akdwuc" path="res://Personagens/Empregada 1B/Empregado1B.png" id="2_ibw7t"]
+
+[resource]
+script = ExtResource("1_wyt6s")
+name = "Empregada"
+texture = ExtResource("2_ibw7t")
+health = 1
+max_health = 2
+damage = 0
